@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Notepad-Xplus</title>
+    <meta
+      name="google-site-verification"
+      content="2M-STG-PTi3smhR4jBU4uMnZA6Q3Xo6oEOaSIMCp-eg"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="notepad,notepadxplus, notepad xplus" />
+    <meta
+      name="description"
+      content="Online Notepad site with firebase
+    security, without registration and free of cost | notepad x plus web app "
+    />
+    <meta name="author" content="ravi nakhate" />
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/icon.png" />
+  <style></style>
+  <script src="https://www.gstatic.com/firebasejs/8.1.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-analytics.js"></script>
+  <script src="conn.js"></script>
+
+  <body>
+    <header>
+      <div>
+        <img src="assets/logo.png" class="logo" onclick="refresh()" />
+      </div>
+    </header>
+
+    <table class="table" cellpadding="50">
+      <tr>
+        <td>Note Id<span style="color: red">*</span></td>
+        <td>
+          <input
+            type="number"
+            id="noteId"
+            class="input"
+            placeholder="min 10 digits"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>Key<span style="color: red">*</span></td>
+        <td>
+          <input
+            type="password"
+            id="key"
+            class="input key"
+            placeholder="private"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td style="display: flex">Description</td>
+        <td>
+          <textarea
+            type="text"
+            rows="8"
+            id="des"
+            class="input textarea"
+          ></textarea>
+        </td>
+      </tr>
+    </table>
+
+    <div class="buttons">
+      <button class="" onclick="insert()">Insert</button>
+      <button class="" onclick="update()">Update</button>
+      <button class="" onclick="delet()">Delete</button>
+      <button class="" onclick="read()">Read</button>
+    </div>
+
+    <div class="notes">
+      <div class="note"><b> Insert 👉</b> All field's are required</div>
+      <div class="note"><b> Update 👉</b> NoteId, Private key are required</div>
+      <div class="note"><b> Delete 👉</b> NoteId, Private key are required</div>
+      <div class="note"><b> Read 👉</b> NoteId, Public key are required</div>
+    </div>
+
+    <footer>
+      <div class="developby">Developed by Ravi Nakhate</div>
+      <div class="links">
+        <a href="https://github.com/RaviNakhate/" target="_blank">
+          <img src="assets/github.png" class="link" />
+        </a>
+        <a
+          href="https://in.linkedin.com/in/ravi-nakhate-a1272b1ba/"
+          target="_blank"
+        >
+          <img src="assets/linkedin.png" class="link"
+        /></a>
+        <a href="https://twitter.com/RaviNakhate2/" target="_blank">
+          <img src="assets/twitter.png" class="link" />
+        </a>
+        <a href="https://www.instagram.com/ravi_nakhate_/" target="_blank">
+          <img src="assets/insta.png" class="link" />
+        </a>
+      </div>
+    </footer>
+  </body>
+
+  <script src="methods.js"></script>
+</html>
